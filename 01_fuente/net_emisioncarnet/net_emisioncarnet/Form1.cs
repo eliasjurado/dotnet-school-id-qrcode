@@ -13,9 +13,9 @@ using System.Text.RegularExpressions;
 
 namespace net_emisioncarnet
 {
-    public partial class picOk : Form
+    public partial class Form1 : Form
     {
-        public picOk()
+        public Form1()
         {
             InitializeComponent();
         }

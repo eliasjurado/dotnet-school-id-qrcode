@@ -26,10 +26,10 @@ D:\Projects\net_emisioncarnet\01_fuente\net_emisioncarnet\net_emisioncarnet\bin\
 D:\Projects\net_emisioncarnet\01_fuente\net_emisioncarnet\net_emisioncarnet\bin\Debug\net_emisioncarnet.exe
 D:\Projects\net_emisioncarnet\01_fuente\net_emisioncarnet\net_emisioncarnet\bin\Debug\net_emisioncarnet.pdb
 D:\Projects\net_emisioncarnet\01_fuente\net_emisioncarnet\net_emisioncarnet\obj\Debug\net_emisioncarnet.csprojAssemblyReference.cache
-D:\Projects\net_emisioncarnet\01_fuente\net_emisioncarnet\net_emisioncarnet\obj\Debug\net_emisioncarnet.picOk.resources
 D:\Projects\net_emisioncarnet\01_fuente\net_emisioncarnet\net_emisioncarnet\obj\Debug\net_emisioncarnet.Form2.resources
 D:\Projects\net_emisioncarnet\01_fuente\net_emisioncarnet\net_emisioncarnet\obj\Debug\net_emisioncarnet.Form3.resources
 D:\Projects\net_emisioncarnet\01_fuente\net_emisioncarnet\net_emisioncarnet\obj\Debug\net_emisioncarnet.Properties.Resources.resources
 D:\Projects\net_emisioncarnet\01_fuente\net_emisioncarnet\net_emisioncarnet\obj\Debug\net_emisioncarnet.csproj.GenerateResource.cache
 D:\Projects\net_emisioncarnet\01_fuente\net_emisioncarnet\net_emisioncarnet\obj\Debug\net_emisioncarnet.exe
 D:\Projects\net_emisioncarnet\01_fuente\net_emisioncarnet\net_emisioncarnet\obj\Debug\net_emisioncarnet.pdb
+D:\Projects\net_emisioncarnet\01_fuente\net_emisioncarnet\net_emisioncarnet\obj\Debug\net_emisioncarnet.Form1.resources

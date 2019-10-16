@@ -45,20 +45,12 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.pictureBox7 = new System.Windows.Forms.PictureBox();
-            this.pictureBox8 = new System.Windows.Forms.PictureBox();
-            this.pictureBox9 = new System.Windows.Forms.PictureBox();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.picfoto)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -71,7 +63,6 @@
             this.label1.Size = new System.Drawing.Size(78, 16);
             this.label1.TabIndex = 1;
             this.label1.Text = "Cod. Alumno";
-            this.label1.Click += new System.EventHandler(this.imprimir_click);
             // 
             // lblcod
             // 
@@ -82,7 +73,6 @@
             this.lblcod.Size = new System.Drawing.Size(40, 16);
             this.lblcod.TabIndex = 1;
             this.lblcod.Text = "label1";
-            this.lblcod.Click += new System.EventHandler(this.imprimir_click);
             // 
             // label3
             // 
@@ -94,7 +84,6 @@
             this.label3.Size = new System.Drawing.Size(72, 16);
             this.label3.TabIndex = 1;
             this.label3.Text = "Ap. Paterno";
-            this.label3.Click += new System.EventHandler(this.imprimir_click);
             // 
             // lblpat
             // 
@@ -105,7 +94,6 @@
             this.lblpat.Size = new System.Drawing.Size(40, 16);
             this.lblpat.TabIndex = 1;
             this.lblpat.Text = "label1";
-            this.lblpat.Click += new System.EventHandler(this.imprimir_click);
             // 
             // label5
             // 
@@ -117,7 +105,6 @@
             this.label5.Size = new System.Drawing.Size(76, 16);
             this.label5.TabIndex = 1;
             this.label5.Text = "Ap. Materno";
-            this.label5.Click += new System.EventHandler(this.imprimir_click);
             // 
             // lblmat
             // 
@@ -128,7 +115,6 @@
             this.lblmat.Size = new System.Drawing.Size(40, 16);
             this.lblmat.TabIndex = 1;
             this.lblmat.Text = "label1";
-            this.lblmat.Click += new System.EventHandler(this.imprimir_click);
             // 
             // label7
             // 
@@ -140,7 +126,6 @@
             this.label7.Size = new System.Drawing.Size(58, 16);
             this.label7.TabIndex = 1;
             this.label7.Text = "Nombres";
-            this.label7.Click += new System.EventHandler(this.imprimir_click);
             // 
             // lblnom
             // 
@@ -151,7 +136,6 @@
             this.lblnom.Size = new System.Drawing.Size(40, 16);
             this.lblnom.TabIndex = 1;
             this.lblnom.Text = "label1";
-            this.lblnom.Click += new System.EventHandler(this.imprimir_click);
             // 
             // picfoto
             // 
@@ -161,7 +145,6 @@
             this.picfoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picfoto.TabIndex = 0;
             this.picfoto.TabStop = false;
-            this.picfoto.Click += new System.EventHandler(this.imprimir_click);
             // 
             // label9
             // 
@@ -173,7 +156,6 @@
             this.label9.Size = new System.Drawing.Size(109, 16);
             this.label9.TabIndex = 1;
             this.label9.Text = "Período de ingreso";
-            this.label9.Click += new System.EventHandler(this.imprimir_click);
             // 
             // lblano
             // 
@@ -184,7 +166,6 @@
             this.lblano.Size = new System.Drawing.Size(40, 16);
             this.lblano.TabIndex = 1;
             this.lblano.Text = "label1";
-            this.lblano.Click += new System.EventHandler(this.imprimir_click);
             // 
             // pictureBox2
             // 
@@ -195,7 +176,6 @@
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 0;
             this.pictureBox2.TabStop = false;
-            this.pictureBox2.Click += new System.EventHandler(this.imprimir_click);
             // 
             // label11
             // 
@@ -207,7 +187,6 @@
             this.label11.Size = new System.Drawing.Size(301, 22);
             this.label11.TabIndex = 1;
             this.label11.Text = "Colegio San Patricio De Monteverdi";
-            this.label11.Click += new System.EventHandler(this.imprimir_click);
             // 
             // pictureBox1
             // 
@@ -249,56 +228,12 @@
             this.pictureBox5.TabIndex = 5;
             this.pictureBox5.TabStop = false;
             // 
-            // pictureBox7
-            // 
-            this.pictureBox7.Location = new System.Drawing.Point(17, 46);
-            this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(296, 19);
-            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox7.TabIndex = 7;
-            this.pictureBox7.TabStop = false;
-            this.pictureBox7.Click += new System.EventHandler(this.imprimir_click);
-            // 
-            // pictureBox8
-            // 
-            this.pictureBox8.Location = new System.Drawing.Point(12, 189);
-            this.pictureBox8.Name = "pictureBox8";
-            this.pictureBox8.Size = new System.Drawing.Size(355, 12);
-            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox8.TabIndex = 8;
-            this.pictureBox8.TabStop = false;
-            this.pictureBox8.Click += new System.EventHandler(this.imprimir_click);
-            // 
-            // pictureBox9
-            // 
-            this.pictureBox9.Location = new System.Drawing.Point(12, 8);
-            this.pictureBox9.Name = "pictureBox9";
-            this.pictureBox9.Size = new System.Drawing.Size(306, 10);
-            this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox9.TabIndex = 9;
-            this.pictureBox9.TabStop = false;
-            this.pictureBox9.Click += new System.EventHandler(this.imprimir_click);
-            // 
-            // pictureBox6
-            // 
-            this.pictureBox6.Location = new System.Drawing.Point(6, 10);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(10, 189);
-            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox6.TabIndex = 10;
-            this.pictureBox6.TabStop = false;
-            this.pictureBox6.Click += new System.EventHandler(this.imprimir_click);
-            // 
             // Form3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(375, 211);
-            this.Controls.Add(this.pictureBox6);
-            this.Controls.Add(this.pictureBox9);
-            this.Controls.Add(this.pictureBox8);
-            this.Controls.Add(this.pictureBox7);
             this.Controls.Add(this.pictureBox5);
             this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.pictureBox3);
@@ -327,10 +262,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -355,9 +286,5 @@
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.PictureBox pictureBox5;
-        private System.Windows.Forms.PictureBox pictureBox7;
-        private System.Windows.Forms.PictureBox pictureBox8;
-        private System.Windows.Forms.PictureBox pictureBox9;
-        private System.Windows.Forms.PictureBox pictureBox6;
     }
 }

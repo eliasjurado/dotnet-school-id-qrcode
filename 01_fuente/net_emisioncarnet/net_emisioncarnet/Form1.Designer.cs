@@ -1,6 +1,6 @@
 ﻿namespace net_emisioncarnet
 {
-    partial class picOk
+    partial class Form1
     {
         /// <summary>
         /// Variable del diseñador necesaria.
@@ -326,7 +326,7 @@
             this.label10.Text = "Registrar alumno nuevo";
             this.label10.Click += new System.EventHandler(this.nuevoAlumno_Click);
             // 
-            // picOk
+            // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -359,7 +359,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox5);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
-            this.Name = "picOk";
+            this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Colegio San Patricio De Monteverdi";
             this.Load += new System.EventHandler(this.Form1_Load);

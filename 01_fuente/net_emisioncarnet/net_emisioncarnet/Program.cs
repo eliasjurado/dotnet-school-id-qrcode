@@ -16,7 +16,7 @@ namespace net_emisioncarnet
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new picOk());
+            Application.Run(new Form1());
         }
     }
 }
