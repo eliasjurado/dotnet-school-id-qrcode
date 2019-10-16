@@ -212,6 +212,7 @@
             // 
             // pictureBox2
             // 
+            this.pictureBox2.BackColor = System.Drawing.Color.White;
             this.pictureBox2.Image = global::net_emisioncarnet.Properties.Resources.lupa;
             this.pictureBox2.Location = new System.Drawing.Point(226, 92);
             this.pictureBox2.Name = "pictureBox2";
@@ -234,6 +235,7 @@
             // 
             // picfotografia
             // 
+            this.picfotografia.BackColor = System.Drawing.Color.White;
             this.picfotografia.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.picfotografia.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.picfotografia.Location = new System.Drawing.Point(382, 95);
@@ -245,7 +247,7 @@
             // 
             // pictureBox5
             // 
-            this.pictureBox5.BackColor = System.Drawing.SystemColors.Control;
+            this.pictureBox5.BackColor = System.Drawing.Color.White;
             this.pictureBox5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox5.Location = new System.Drawing.Point(382, 282);
@@ -258,7 +260,7 @@
             // 
             // pictureBox6
             // 
-            this.pictureBox6.BackColor = System.Drawing.SystemColors.Control;
+            this.pictureBox6.BackColor = System.Drawing.Color.White;
             this.pictureBox6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox6.Location = new System.Drawing.Point(199, 282);
@@ -292,7 +294,7 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.BackColor = System.Drawing.SystemColors.Control;
+            this.pictureBox1.BackColor = System.Drawing.Color.White;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox1.Location = new System.Drawing.Point(16, 282);
@@ -328,6 +330,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(557, 330);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);
