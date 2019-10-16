@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using net_emisioncarnet.DAO;
 using System.IO;
+using System.Threading.Tasks;
 
 namespace net_emisioncarnet
 {
@@ -31,27 +32,27 @@ namespace net_emisioncarnet
 
         private void imprimir_click(object sender, EventArgs e)
         {
-            imprimir();
         }
 
-        private void imprimir()
+        private async void Form3_Load(object sender, EventArgs e)
         {
+            await Task.Delay(1000);
             if (MessageBox.Show("¿Desea imprimir el carnet?", "Imprimir Carnet", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
 
                 Graphics gfx = this.CreateGraphics();
 
                 Bitmap bmp = new Bitmap(this.Width, this.Height, gfx);
-                    
-               this.DrawToBitmap(bmp, new Rectangle(0, 0, this.Width, this.Height));
-                    
+
+                this.DrawToBitmap(bmp, new Rectangle(0, 0, this.Width, this.Height));
+
                 /*continuar aqui*/
 
 
                 // Displays a SaveFileDialog so the user can save the Image
                 // assigned to Button2.
                 SaveFileDialog saveFileDialog1 = new SaveFileDialog();
-                saveFileDialog1.FileName = ""+lblcod.Text+"";
+                saveFileDialog1.FileName = "" + lblcod.Text + "";
                 saveFileDialog1.Filter = "JPeg Image|*.jpg|Bitmap Image|*.bmp|Gif Image|*.gif";
                 saveFileDialog1.Title = "Guardar carnet de alumno";
                 saveFileDialog1.ShowDialog();
@@ -90,11 +91,6 @@ namespace net_emisioncarnet
             {
                 this.Dispose();
             }
-        }
-
-        private void Form3_Load(object sender, EventArgs e)
-        {
-            
         }
     }
 }
