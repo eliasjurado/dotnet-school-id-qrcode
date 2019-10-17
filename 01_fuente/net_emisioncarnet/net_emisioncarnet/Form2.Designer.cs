@@ -55,14 +55,14 @@
             this.dgvAlumno.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvAlumno.Location = new System.Drawing.Point(12, 96);
             this.dgvAlumno.Name = "dgvAlumno";
-            this.dgvAlumno.Size = new System.Drawing.Size(750, 393);
+            this.dgvAlumno.Size = new System.Drawing.Size(646, 393);
             this.dgvAlumno.TabIndex = 2;
             this.dgvAlumno.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvAlumno_CellDoubleClick);
             // 
             // pictureBox3
             // 
             this.pictureBox3.Image = global::net_emisioncarnet.Properties.Resources.logo;
-            this.pictureBox3.Location = new System.Drawing.Point(344, 12);
+            this.pictureBox3.Location = new System.Drawing.Point(310, 12);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(50, 50);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -101,7 +101,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(774, 501);
+            this.ClientSize = new System.Drawing.Size(670, 501);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtbuscar);
