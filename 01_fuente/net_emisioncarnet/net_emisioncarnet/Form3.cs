@@ -12,6 +12,7 @@ using System.IO;
 using System.Threading.Tasks;
 using System.Diagnostics;
 using Gma.QrCodeNet.Encoding;
+using Gma.QrCodeNet.Encoding.Windows.Render;
 using System.Configuration;
 
 namespace net_emisioncarnet
@@ -35,7 +36,7 @@ namespace net_emisioncarnet
 
         private async void Form3_Load(object sender, EventArgs e)
         {
-            string cod = lblcod.Text;
+            string codigoalumno = lblcod.Text;
             //espero un segundo y...
             await Task.Delay(1000);
             //lanzo el mensaje de confirmación
@@ -54,10 +55,11 @@ namespace net_emisioncarnet
                     Directory.CreateDirectory(directorio);
                 }
                
+
                 //Grabo la imagen
                 using (MemoryStream memory = new MemoryStream())
                 {
-                    using (FileStream fs = new FileStream(directorio+cod+".jpg", FileMode.Create, FileAccess.ReadWrite))
+                    using (FileStream fs = new FileStream(directorio+codigoalumno+".jpg", FileMode.Create, FileAccess.ReadWrite))
                     {
                         bmp.Save(memory, ImageFormat.Jpeg);
                         byte[] bytes = memory.ToArray();
@@ -66,6 +68,15 @@ namespace net_emisioncarnet
                 }
                 //Abro la carpeta con la imagen
                 Process.Start(directorio);
+
+
+                //Hago el codigo QR
+                var qrEncoder = new QrEncoder(ErrorCorrectionLevel.H);
+                var qrCode = qrEncoder.Encode(codigoalumno);
+
+                var renderer = new GraphicsRenderer(new FixedModuleSize(5, QuietZoneModules.Two), Brushes.Black, Brushes.White);
+                using (var stream = new FileStream(directorio+codigoalumno+"qr.png", FileMode.Create))
+                    renderer.WriteToStream(qrCode.Matrix, ImageFormat.Png, stream);
             }
             else
             {

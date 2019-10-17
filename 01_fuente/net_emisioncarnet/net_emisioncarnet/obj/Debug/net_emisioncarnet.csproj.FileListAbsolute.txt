@@ -37,3 +37,4 @@ D:\Projects\net_emisioncarnet\01_fuente\net_emisioncarnet\net_emisioncarnet\bin\
 D:\Projects\net_emisioncarnet\01_fuente\net_emisioncarnet\net_emisioncarnet\bin\Debug\Gma.QrCodeNet.Encoding.pdb
 D:\Projects\net_emisioncarnet\01_fuente\net_emisioncarnet\net_emisioncarnet\bin\Debug\Gma.QrCodeNet.Encoding.xml
 D:\Projects\net_emisioncarnet\01_fuente\net_emisioncarnet\net_emisioncarnet\obj\Debug\net_emisioncarnet.csproj.CopyComplete
+D:\Projects\net_emisioncarnet\01_fuente\net_emisioncarnet\net_emisioncarnet\obj\Debug\net_emisioncarnet.Form4.resources
