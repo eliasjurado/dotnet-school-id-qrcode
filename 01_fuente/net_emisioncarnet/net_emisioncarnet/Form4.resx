@@ -117,7 +117,7 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="lblcod.Text" xml:space="preserve">
+  <data name="label4.Text" xml:space="preserve">
     <value>El uso de este carné supone la aceptación por el titular de las condiciones del convenio que la rige. Se ruega a quien encuentre extraviado este carné entregarlo en el counter de alumnos de la Secretaría Académica del Colegio San Patricio de Monteverdi.</value>
   </data>
 </root>

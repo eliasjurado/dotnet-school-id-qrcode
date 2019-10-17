@@ -35,8 +35,9 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.picqr = new System.Windows.Forms.PictureBox();
-            this.lblcod = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
+            this.lblcodigo = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -104,15 +105,15 @@
             this.picqr.TabIndex = 7;
             this.picqr.TabStop = false;
             // 
-            // lblcod
+            // label4
             // 
-            this.lblcod.Font = new System.Drawing.Font("Microsoft YaHei UI", 6F);
-            this.lblcod.Location = new System.Drawing.Point(194, 94);
-            this.lblcod.Name = "lblcod";
-            this.lblcod.Size = new System.Drawing.Size(166, 94);
-            this.lblcod.TabIndex = 9;
-            this.lblcod.Text = resources.GetString("lblcod.Text");
-            this.lblcod.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label4.Font = new System.Drawing.Font("Microsoft YaHei UI", 6F);
+            this.label4.Location = new System.Drawing.Point(194, 94);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(166, 94);
+            this.label4.TabIndex = 9;
+            this.label4.Text = resources.GetString("label4.Text");
+            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label11
             // 
@@ -125,6 +126,17 @@
             this.label11.TabIndex = 18;
             this.label11.Text = "Colegio San Patricio De Monteverdi";
             // 
+            // lblcodigo
+            // 
+            this.lblcodigo.AutoSize = true;
+            this.lblcodigo.Font = new System.Drawing.Font("Microsoft YaHei UI", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblcodigo.ForeColor = System.Drawing.SystemColors.Control;
+            this.lblcodigo.Location = new System.Drawing.Point(198, 188);
+            this.lblcodigo.Name = "lblcodigo";
+            this.lblcodigo.Size = new System.Drawing.Size(38, 14);
+            this.lblcodigo.TabIndex = 18;
+            this.lblcodigo.Text = "codigo";
+            // 
             // Form4
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -136,11 +148,13 @@
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.picqr);
-            this.Controls.Add(this.lblcod);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.lblcodigo);
             this.Controls.Add(this.label11);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Form4";
             this.Text = "Form4";
+            this.Load += new System.EventHandler(this.Form4_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
@@ -160,7 +174,8 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox picqr;
-        private System.Windows.Forms.Label lblcod;
+        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label lblcodigo;
     }
 }

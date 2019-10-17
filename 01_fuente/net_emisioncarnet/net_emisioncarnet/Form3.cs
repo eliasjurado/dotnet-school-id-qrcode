@@ -75,8 +75,15 @@ namespace net_emisioncarnet
                 var qrCode = qrEncoder.Encode(codigoalumno);
 
                 var renderer = new GraphicsRenderer(new FixedModuleSize(5, QuietZoneModules.Two), Brushes.Black, Brushes.White);
-                using (var stream = new FileStream(directorio+codigoalumno+"qr.png", FileMode.Create))
-                    renderer.WriteToStream(qrCode.Matrix, ImageFormat.Png, stream);
+                var stream = new FileStream(directorio + codigoalumno + "qr.png", FileMode.Create);
+                renderer.WriteToStream(qrCode.Matrix, ImageFormat.Png, stream);
+
+                Image qr = Image.FromStream(stream);
+                
+                Form4 f = new Form4(qr,codigoalumno);
+                f.Show();
+
+                this.Dispose();
             }
             else
             {
