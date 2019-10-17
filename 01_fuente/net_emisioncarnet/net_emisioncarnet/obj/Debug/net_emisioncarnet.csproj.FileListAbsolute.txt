@@ -33,3 +33,7 @@ D:\Projects\net_emisioncarnet\01_fuente\net_emisioncarnet\net_emisioncarnet\obj\
 D:\Projects\net_emisioncarnet\01_fuente\net_emisioncarnet\net_emisioncarnet\obj\Debug\net_emisioncarnet.exe
 D:\Projects\net_emisioncarnet\01_fuente\net_emisioncarnet\net_emisioncarnet\obj\Debug\net_emisioncarnet.pdb
 D:\Projects\net_emisioncarnet\01_fuente\net_emisioncarnet\net_emisioncarnet\obj\Debug\net_emisioncarnet.Form1.resources
+D:\Projects\net_emisioncarnet\01_fuente\net_emisioncarnet\net_emisioncarnet\bin\Debug\Gma.QrCodeNet.Encoding.dll
+D:\Projects\net_emisioncarnet\01_fuente\net_emisioncarnet\net_emisioncarnet\bin\Debug\Gma.QrCodeNet.Encoding.pdb
+D:\Projects\net_emisioncarnet\01_fuente\net_emisioncarnet\net_emisioncarnet\bin\Debug\Gma.QrCodeNet.Encoding.xml
+D:\Projects\net_emisioncarnet\01_fuente\net_emisioncarnet\net_emisioncarnet\obj\Debug\net_emisioncarnet.csproj.CopyComplete

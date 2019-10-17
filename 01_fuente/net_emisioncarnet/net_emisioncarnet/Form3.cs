@@ -3,14 +3,16 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Imaging;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using net_emisioncarnet.DAO;
 using System.IO;
 using System.Threading.Tasks;
 using System.Diagnostics;
+using Gma.QrCodeNet.Encoding;
+using System.Configuration;
 
 namespace net_emisioncarnet
 {
@@ -33,6 +35,7 @@ namespace net_emisioncarnet
 
         private async void Form3_Load(object sender, EventArgs e)
         {
+            string cod = lblcod.Text;
             //espero un segundo y...
             await Task.Delay(1000);
             //lanzo el mensaje de confirmación
@@ -42,49 +45,27 @@ namespace net_emisioncarnet
                 Graphics gfx = this.CreateGraphics();
                 Bitmap bmp = new Bitmap(this.Width, this.Height, gfx);
                 this.DrawToBitmap(bmp, new Rectangle(0, 0, this.Width, this.Height));
-
-                // Displays a SaveFileDialog so the user can save the Image
-                // assigned to Button2.
-                SaveFileDialog saveFileDialog1 = new SaveFileDialog();
-                saveFileDialog1.FileName = "" + lblcod.Text + "";
-                saveFileDialog1.Filter = "JPeg Image|*.jpg|Bitmap Image|*.bmp|Gif Image|*.gif";
-                saveFileDialog1.Title = "Guardar carnet de alumno";
-                saveFileDialog1.ShowDialog();
-
-                // If the file name is not an empty string open it for saving.
-                if (saveFileDialog1.FileName != "")
+               
+                //Abro el directorio que recibira el archivo
+                var directorio = ConfigurationManager.AppSettings.Get("DirectorioCarnet");
+                var directoryinfo = new DirectoryInfo(directorio);
+                if (!directoryinfo.Exists)
                 {
-                    // Saves the Image via a FileStream created by the OpenFile method.
-                    System.IO.FileStream fs =
-                        (System.IO.FileStream)saveFileDialog1.OpenFile();
-                    // Saves the Image in the appropriate ImageFormat based upon the
-                    // File type selected in the dialog box.
-                    // NOTE that the FilterIndex property is one-based.
-                    switch (saveFileDialog1.FilterIndex)
-                    {
-                        case 1:
-                            bmp.Save(fs,
-                              System.Drawing.Imaging.ImageFormat.Jpeg);
-                            break;
-
-                        case 2:
-                            bmp.Save(fs,
-                              System.Drawing.Imaging.ImageFormat.Bmp);
-                            break;
-
-                        case 3:
-                            bmp.Save(fs,
-                              System.Drawing.Imaging.ImageFormat.Gif);
-                            break;
-                    }
-                    this.Dispose();
-                    //Obtengo la ruta la imagen que guardé
-                    string path = Path.GetDirectoryName(saveFileDialog1.FileName);
-                    //Abro la carpeta
-                    Process.Start(path);
-
+                    Directory.CreateDirectory(directorio);
                 }
-
+               
+                //Grabo la imagen
+                using (MemoryStream memory = new MemoryStream())
+                {
+                    using (FileStream fs = new FileStream(directorio+cod+".jpg", FileMode.Create, FileAccess.ReadWrite))
+                    {
+                        bmp.Save(memory, ImageFormat.Jpeg);
+                        byte[] bytes = memory.ToArray();
+                        fs.Write(bytes, 0, bytes.Length);
+                    }
+                }
+                //Abro la carpeta con la imagen
+                Process.Start(directorio);
             }
             else
             {
