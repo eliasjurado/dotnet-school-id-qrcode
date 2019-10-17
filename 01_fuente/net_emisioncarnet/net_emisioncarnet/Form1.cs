@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Drawing2D;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,6 +11,7 @@ using System.Windows.Forms;
 using System.IO;
 using net_emisioncarnet.DAO;
 using System.Text.RegularExpressions;
+using System.Configuration;
 
 namespace net_emisioncarnet
 {
@@ -35,10 +37,36 @@ namespace net_emisioncarnet
             if (dres1 == DialogResult.Cancel)
                 return;
             txtexaminar.Text = examinar.FileName;
-            picfotografia.Image = Image.FromFile(examinar.FileName);
+            //--------------------------------------------------
+            //Reducimos la imagen de tamaño pasaporte a 100 x 128
+
+            var srcImage = Image.FromFile(txtexaminar.Text);
+            var newWidth = 100;
+            var newHeight = 128;
+            var newImage = new Bitmap(newWidth, newHeight);
+            var graphics = Graphics.FromImage(newImage);
+
+            graphics.SmoothingMode = SmoothingMode.AntiAlias;
+            graphics.InterpolationMode = InterpolationMode.HighQualityBicubic;
+            graphics.PixelOffsetMode = PixelOffsetMode.HighQuality;
+            graphics.DrawImage(srcImage, new Rectangle(0, 0, newWidth, newHeight));
+            //recortamos la nueva imagen a 100x100
+
+            Rectangle cropRect = new Rectangle(0, 0, 100, 100);
+            Bitmap target = new Bitmap(cropRect.Width, cropRect.Height);
+            using (Graphics g = Graphics.FromImage(target))
+            {
+                g.DrawImage(newImage, new Rectangle(0, 0, target.Width, target.Height), cropRect, GraphicsUnit.Pixel);
+            }
+
+            picfotografia.Image = target;
         }
 
-
+        public static byte[] ImageToByte(Image img)
+        {
+            ImageConverter converter = new ImageConverter();
+            return (byte[])converter.ConvertTo(img, typeof(byte[]));
+        }
 
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -70,20 +98,10 @@ namespace net_emisioncarnet
             }
             else
             {
-                FileStream stream = new FileStream(txtexaminar.Text, FileMode.Open, FileAccess.Read);
-                //Se inicailiza un flujo de archivo con la imagen seleccionada desde el disco.
-                BinaryReader br = new BinaryReader(stream);
-                FileInfo fi = new FileInfo(txtexaminar.Text);
+                //pasamos a byte la imagen acomodada
+                byte[] binData = ImageToByte(picfotografia.Image);
 
-                //Se inicializa un arreglo de Bytes del tamaño de la imagen
-                byte[] binData = new byte[stream.Length];
-                //Se almacena en el arreglo de bytes la informacion que se obtiene del flujo de archivos(foto)
-                //Lee el bloque de bytes del flujo y escribe los datos en un búfer dado.
-                stream.Read(binData, 0, Convert.ToInt32(stream.Length));
-
-                ////Se muetra la imagen obtenida desde el flujo de datos
-                picfotografia.Image = Image.FromStream(stream);
-
+                //Doy formato a los nombres y apellidos
                 txtnom.Text = System.Globalization.CultureInfo.CurrentCulture.TextInfo.ToTitleCase((txtnom.Text).ToLower());
                 txtpat.Text = System.Globalization.CultureInfo.CurrentCulture.TextInfo.ToTitleCase(txtpat.Text.ToLower());
                 txtmat.Text = System.Globalization.CultureInfo.CurrentCulture.TextInfo.ToTitleCase(txtmat.Text.ToLower());
@@ -142,6 +160,17 @@ namespace net_emisioncarnet
             txtmat.Text = apetmat;
             picfotografia.Image = foto;
             txtexaminar.Text = "";
+
+            //Abro el directorio que recibira el archivo
+            var directoriof = ConfigurationManager.AppSettings.Get("DirectorioFoto");
+            var directoryfinfo = new DirectoryInfo(directoriof);
+            if (!directoryfinfo.Exists)
+            {
+                Directory.CreateDirectory(directoriof);
+            }
+            //generamos un archivo con la foto del alumno registrado
+            Bitmap archivo = new Bitmap(picfotografia.Image);
+            archivo.Save(directoriof+id+".jpg");
         }
     
 

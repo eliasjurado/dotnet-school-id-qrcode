@@ -70,13 +70,21 @@ namespace net_emisioncarnet
                 Process.Start(directorio);
 
 
+                //Directorio para el QR
+                var directorioqr = ConfigurationManager.AppSettings.Get("DirectorioQR");
+                var directoryqrinfo = new DirectoryInfo(directorioqr);
+                if (!directoryqrinfo.Exists)
+                {
+                    Directory.CreateDirectory(directorioqr);
+                }
+
                 //Hago el codigo QR
                 var qrEncoder = new QrEncoder(ErrorCorrectionLevel.H);
                 var qrCode = qrEncoder.Encode(codigoalumno);
 
                 var renderer = new GraphicsRenderer(new FixedModuleSize(5, QuietZoneModules.Two), Brushes.Black, Brushes.White);
-                var stream = new FileStream(directorio + codigoalumno + "qr.png", FileMode.Create);
-                renderer.WriteToStream(qrCode.Matrix, ImageFormat.Png, stream);
+                var stream = new FileStream(directorioqr + codigoalumno + ".jpg", FileMode.Create);
+                renderer.WriteToStream(qrCode.Matrix, ImageFormat.Jpeg, stream);
 
                 Image qr = Image.FromStream(stream);
                 
